@@ -1,4 +1,4 @@
-<x-preline.navbar.menu-item-2 href="{{ '' }}" :active="false">
+<x-preline.navbar.menu-item-2 href="{{ route('dshb.index') }}" :active="false">
     <x-icons.pie-chart class="w-5 h-5" />
     Dashboard
 </x-preline.navbar.menu-item-2>

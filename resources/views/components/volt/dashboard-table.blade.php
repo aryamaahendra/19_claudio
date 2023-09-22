@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Builder;
 new class extends BaseTable {
     public function query(): Builder
     {
-        return ProductMaterial::query()->with(['supplier']);
+        return ProductMaterial::query()->with(['supplier'])
+            ->whereRaw('in_stock < maximumStock');
     }
 
     public function columns(): array
@@ -17,11 +18,8 @@ new class extends BaseTable {
             Column::make('code', 'Kode'), 
             Column::make('name', 'Nama'), 
             Column::make('in_stock', 'Stock'), 
-            Column::make('rataRataKebutuhan', 'Rata2 Kebutuhan'),
-            Column::make('safetyStock', 'Safety Stock'),
-            Column::make('minimumStock', 'Min Stock'),
-            Column::make('maximumStock', 'Max Stock'),
-            Column::make('Q', 'Q'),
+            Column::make('unit_measure', 'Satuan'),
+            Column::make('supplier.name', 'Supplier'),
             Column::make('-1', 'Restocked'),
         ];
     }
@@ -34,18 +32,6 @@ new class extends BaseTable {
     @php
         $rows = $this->data();
     @endphp
-
-    <div class="flex justify-between items-center px-6 mb-6">
-        <div class="flex gap-2">
-            @include('components.preline.table.base-filters')
-        </div>
-
-        <form action="{{ route('dshb.minmax.process') }}" method="POST">
-            @csrf
-
-            <x-preline.button.primary type="submit">Process</x-preline.button.primary>
-        </form>
-    </div>
 
     <div class="px-6 mb-6">
         <div class="flex items-center">
@@ -74,7 +60,7 @@ new class extends BaseTable {
         @include('components.preline.table.base-columns')
 
         <x-preline.table.body>
-            @include('minmax.partials.table-body')
+            @include('dashboard.partials.table-body')
         </x-preline.table.body>
     </x-preline.table>
 
