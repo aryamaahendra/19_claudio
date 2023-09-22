@@ -1,0 +1,1236 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class MaterialRestockedTableSeeder extends Seeder
+{
+
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     */
+    public function run()
+    {
+        
+
+        \DB::table('material_restocked')->delete();
+        
+        \DB::table('material_restocked')->insert(array (
+            0 => 
+            array (
+                'created_at' => NULL,
+                'id' => 1,
+                'material_id' => 1,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            1 => 
+            array (
+                'created_at' => NULL,
+                'id' => 2,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            2 => 
+            array (
+                'created_at' => NULL,
+                'id' => 3,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            3 => 
+            array (
+                'created_at' => NULL,
+                'id' => 4,
+                'material_id' => 12,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 2420000,
+                'unit_price' => 48400,
+                'updated_at' => NULL,
+            ),
+            4 => 
+            array (
+                'created_at' => NULL,
+                'id' => 5,
+                'material_id' => 13,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 2430000,
+                'unit_price' => 48600,
+                'updated_at' => NULL,
+            ),
+            5 => 
+            array (
+                'created_at' => NULL,
+                'id' => 6,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 1,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            6 => 
+            array (
+                'created_at' => NULL,
+                'id' => 7,
+                'material_id' => 1,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            7 => 
+            array (
+                'created_at' => NULL,
+                'id' => 8,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            8 => 
+            array (
+                'created_at' => NULL,
+                'id' => 9,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            9 => 
+            array (
+                'created_at' => NULL,
+                'id' => 10,
+                'material_id' => 12,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 2420000,
+                'unit_price' => 48400,
+                'updated_at' => NULL,
+            ),
+            10 => 
+            array (
+                'created_at' => NULL,
+                'id' => 11,
+                'material_id' => 13,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            11 => 
+            array (
+                'created_at' => NULL,
+                'id' => 12,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 2,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            12 => 
+            array (
+                'created_at' => NULL,
+                'id' => 13,
+                'material_id' => 15,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 2440000,
+                'unit_price' => 48800,
+                'updated_at' => NULL,
+            ),
+            13 => 
+            array (
+                'created_at' => NULL,
+                'id' => 14,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 2,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            14 => 
+            array (
+                'created_at' => NULL,
+                'id' => 15,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 3,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            15 => 
+            array (
+                'created_at' => NULL,
+                'id' => 16,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 3,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            16 => 
+            array (
+                'created_at' => NULL,
+                'id' => 17,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 3,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            17 => 
+            array (
+                'created_at' => NULL,
+                'id' => 18,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 3,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            18 => 
+            array (
+                'created_at' => NULL,
+                'id' => 19,
+                'material_id' => 12,
+                'quantity' => 25,
+                'restocked_id' => 3,
+                'total_price' => 1210000,
+                'unit_price' => 48400,
+                'updated_at' => NULL,
+            ),
+            19 => 
+            array (
+                'created_at' => NULL,
+                'id' => 20,
+                'material_id' => 13,
+                'quantity' => 25,
+                'restocked_id' => 3,
+                'total_price' => 1220000,
+                'unit_price' => 48800,
+                'updated_at' => NULL,
+            ),
+            20 => 
+            array (
+                'created_at' => NULL,
+                'id' => 21,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 3,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            21 => 
+            array (
+                'created_at' => NULL,
+                'id' => 22,
+                'material_id' => 15,
+                'quantity' => 25,
+                'restocked_id' => 3,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            22 => 
+            array (
+                'created_at' => NULL,
+                'id' => 23,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 3,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            23 => 
+            array (
+                'created_at' => NULL,
+                'id' => 24,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 4,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            24 => 
+            array (
+                'created_at' => NULL,
+                'id' => 25,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 4,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            25 => 
+            array (
+                'created_at' => NULL,
+                'id' => 26,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 4,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            26 => 
+            array (
+                'created_at' => NULL,
+                'id' => 27,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 4,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            27 => 
+            array (
+                'created_at' => NULL,
+                'id' => 28,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 4,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            28 => 
+            array (
+                'created_at' => NULL,
+                'id' => 29,
+                'material_id' => 15,
+                'quantity' => 25,
+                'restocked_id' => 4,
+                'total_price' => 1220000,
+                'unit_price' => 48800,
+                'updated_at' => NULL,
+            ),
+            29 => 
+            array (
+                'created_at' => NULL,
+                'id' => 30,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 4,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            30 => 
+            array (
+                'created_at' => NULL,
+                'id' => 31,
+                'material_id' => 1,
+                'quantity' => 50,
+                'restocked_id' => 5,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            31 => 
+            array (
+                'created_at' => NULL,
+                'id' => 32,
+                'material_id' => 2,
+                'quantity' => 25,
+                'restocked_id' => 5,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            32 => 
+            array (
+                'created_at' => NULL,
+                'id' => 33,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 5,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            33 => 
+            array (
+                'created_at' => NULL,
+                'id' => 34,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 5,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            34 => 
+            array (
+                'created_at' => NULL,
+                'id' => 35,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 5,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            35 => 
+            array (
+                'created_at' => NULL,
+                'id' => 36,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 5,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            36 => 
+            array (
+                'created_at' => NULL,
+                'id' => 37,
+                'material_id' => 15,
+                'quantity' => 25,
+                'restocked_id' => 5,
+                'total_price' => 1220000,
+                'unit_price' => 48800,
+                'updated_at' => NULL,
+            ),
+            37 => 
+            array (
+                'created_at' => NULL,
+                'id' => 38,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 5,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            38 => 
+            array (
+                'created_at' => NULL,
+                'id' => 39,
+                'material_id' => 1,
+                'quantity' => 50,
+                'restocked_id' => 6,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            39 => 
+            array (
+                'created_at' => NULL,
+                'id' => 40,
+                'material_id' => 2,
+                'quantity' => 25,
+                'restocked_id' => 6,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            40 => 
+            array (
+                'created_at' => NULL,
+                'id' => 41,
+                'material_id' => 3,
+                'quantity' => 25,
+                'restocked_id' => 6,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            41 => 
+            array (
+                'created_at' => NULL,
+                'id' => 42,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 6,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            42 => 
+            array (
+                'created_at' => NULL,
+                'id' => 43,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 6,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            43 => 
+            array (
+                'created_at' => NULL,
+                'id' => 44,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 6,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            44 => 
+            array (
+                'created_at' => NULL,
+                'id' => 45,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 6,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            45 => 
+            array (
+                'created_at' => NULL,
+                'id' => 46,
+                'material_id' => 15,
+                'quantity' => 25,
+                'restocked_id' => 6,
+                'total_price' => 1220000,
+                'unit_price' => 48800,
+                'updated_at' => NULL,
+            ),
+            46 => 
+            array (
+                'created_at' => NULL,
+                'id' => 47,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 6,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            47 => 
+            array (
+                'created_at' => NULL,
+                'id' => 48,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 7,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            48 => 
+            array (
+                'created_at' => NULL,
+                'id' => 49,
+                'material_id' => 2,
+                'quantity' => 50,
+                'restocked_id' => 7,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            49 => 
+            array (
+                'created_at' => NULL,
+                'id' => 50,
+                'material_id' => 3,
+                'quantity' => 50,
+                'restocked_id' => 7,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            50 => 
+            array (
+                'created_at' => NULL,
+                'id' => 51,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 7,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            51 => 
+            array (
+                'created_at' => NULL,
+                'id' => 52,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 7,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            52 => 
+            array (
+                'created_at' => NULL,
+                'id' => 53,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 7,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            53 => 
+            array (
+                'created_at' => NULL,
+                'id' => 54,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 7,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            54 => 
+            array (
+                'created_at' => NULL,
+                'id' => 55,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 7,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            55 => 
+            array (
+                'created_at' => NULL,
+                'id' => 56,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 8,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            56 => 
+            array (
+                'created_at' => NULL,
+                'id' => 57,
+                'material_id' => 2,
+                'quantity' => 50,
+                'restocked_id' => 8,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            57 => 
+            array (
+                'created_at' => NULL,
+                'id' => 58,
+                'material_id' => 3,
+                'quantity' => 50,
+                'restocked_id' => 8,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            58 => 
+            array (
+                'created_at' => NULL,
+                'id' => 59,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            59 => 
+            array (
+                'created_at' => NULL,
+                'id' => 60,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            60 => 
+            array (
+                'created_at' => NULL,
+                'id' => 61,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            61 => 
+            array (
+                'created_at' => NULL,
+                'id' => 62,
+                'material_id' => 9,
+                'quantity' => 75,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            62 => 
+            array (
+                'created_at' => NULL,
+                'id' => 63,
+                'material_id' => 10,
+                'quantity' => 300,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            63 => 
+            array (
+                'created_at' => NULL,
+                'id' => 64,
+                'material_id' => 11,
+                'quantity' => 200,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            64 => 
+            array (
+                'created_at' => NULL,
+                'id' => 65,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 8,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            65 => 
+            array (
+                'created_at' => NULL,
+                'id' => 66,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 8,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            66 => 
+            array (
+                'created_at' => NULL,
+                'id' => 67,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 9,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            67 => 
+            array (
+                'created_at' => NULL,
+                'id' => 68,
+                'material_id' => 2,
+                'quantity' => 50,
+                'restocked_id' => 9,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            68 => 
+            array (
+                'created_at' => NULL,
+                'id' => 69,
+                'material_id' => 3,
+                'quantity' => 50,
+                'restocked_id' => 9,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            69 => 
+            array (
+                'created_at' => NULL,
+                'id' => 70,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            70 => 
+            array (
+                'created_at' => NULL,
+                'id' => 71,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            71 => 
+            array (
+                'created_at' => NULL,
+                'id' => 72,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            72 => 
+            array (
+                'created_at' => NULL,
+                'id' => 73,
+                'material_id' => 9,
+                'quantity' => 75,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            73 => 
+            array (
+                'created_at' => NULL,
+                'id' => 74,
+                'material_id' => 10,
+                'quantity' => 300,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            74 => 
+            array (
+                'created_at' => NULL,
+                'id' => 75,
+                'material_id' => 11,
+                'quantity' => 200,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            75 => 
+            array (
+                'created_at' => NULL,
+                'id' => 76,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 9,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            76 => 
+            array (
+                'created_at' => NULL,
+                'id' => 77,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 9,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            77 => 
+            array (
+                'created_at' => NULL,
+                'id' => 78,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 10,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            78 => 
+            array (
+                'created_at' => NULL,
+                'id' => 79,
+                'material_id' => 2,
+                'quantity' => 50,
+                'restocked_id' => 10,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            79 => 
+            array (
+                'created_at' => NULL,
+                'id' => 80,
+                'material_id' => 3,
+                'quantity' => 50,
+                'restocked_id' => 10,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            80 => 
+            array (
+                'created_at' => NULL,
+                'id' => 81,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            81 => 
+            array (
+                'created_at' => NULL,
+                'id' => 82,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            82 => 
+            array (
+                'created_at' => NULL,
+                'id' => 83,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            83 => 
+            array (
+                'created_at' => NULL,
+                'id' => 84,
+                'material_id' => 9,
+                'quantity' => 75,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            84 => 
+            array (
+                'created_at' => NULL,
+                'id' => 85,
+                'material_id' => 10,
+                'quantity' => 300,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            85 => 
+            array (
+                'created_at' => NULL,
+                'id' => 86,
+                'material_id' => 11,
+                'quantity' => 200,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            86 => 
+            array (
+                'created_at' => NULL,
+                'id' => 87,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 10,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            87 => 
+            array (
+                'created_at' => NULL,
+                'id' => 88,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 10,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            88 => 
+            array (
+                'created_at' => NULL,
+                'id' => 89,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 11,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            89 => 
+            array (
+                'created_at' => NULL,
+                'id' => 90,
+                'material_id' => 2,
+                'quantity' => 50,
+                'restocked_id' => 11,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            90 => 
+            array (
+                'created_at' => NULL,
+                'id' => 91,
+                'material_id' => 3,
+                'quantity' => 50,
+                'restocked_id' => 11,
+                'total_price' => 2400000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            91 => 
+            array (
+                'created_at' => NULL,
+                'id' => 92,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            92 => 
+            array (
+                'created_at' => NULL,
+                'id' => 93,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            93 => 
+            array (
+                'created_at' => NULL,
+                'id' => 94,
+                'material_id' => 8,
+                'quantity' => 25,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            94 => 
+            array (
+                'created_at' => NULL,
+                'id' => 95,
+                'material_id' => 9,
+                'quantity' => 75,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            95 => 
+            array (
+                'created_at' => NULL,
+                'id' => 96,
+                'material_id' => 10,
+                'quantity' => 300,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            96 => 
+            array (
+                'created_at' => NULL,
+                'id' => 97,
+                'material_id' => 11,
+                'quantity' => 200,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            97 => 
+            array (
+                'created_at' => NULL,
+                'id' => 98,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 11,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+            98 => 
+            array (
+                'created_at' => NULL,
+                'id' => 99,
+                'material_id' => 16,
+                'quantity' => 50,
+                'restocked_id' => 11,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            99 => 
+            array (
+                'created_at' => NULL,
+                'id' => 100,
+                'material_id' => 1,
+                'quantity' => 25,
+                'restocked_id' => 12,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            100 => 
+            array (
+                'created_at' => NULL,
+                'id' => 101,
+                'material_id' => 2,
+                'quantity' => 25,
+                'restocked_id' => 12,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            101 => 
+            array (
+                'created_at' => NULL,
+                'id' => 102,
+                'material_id' => 3,
+                'quantity' => 25,
+                'restocked_id' => 12,
+                'total_price' => 1200000,
+                'unit_price' => 48000,
+                'updated_at' => NULL,
+            ),
+            102 => 
+            array (
+                'created_at' => NULL,
+                'id' => 103,
+                'material_id' => 4,
+                'quantity' => 50,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            103 => 
+            array (
+                'created_at' => NULL,
+                'id' => 104,
+                'material_id' => 5,
+                'quantity' => 50,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            104 => 
+            array (
+                'created_at' => NULL,
+                'id' => 105,
+                'material_id' => 7,
+                'quantity' => 1,
+                'restocked_id' => 12,
+                'total_price' => 2100000,
+                'unit_price' => 2100000,
+                'updated_at' => NULL,
+            ),
+            105 => 
+            array (
+                'created_at' => NULL,
+                'id' => 106,
+                'material_id' => 8,
+                'quantity' => 75,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            106 => 
+            array (
+                'created_at' => NULL,
+                'id' => 107,
+                'material_id' => 9,
+                'quantity' => 125,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            107 => 
+            array (
+                'created_at' => NULL,
+                'id' => 108,
+                'material_id' => 10,
+                'quantity' => 300,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            108 => 
+            array (
+                'created_at' => NULL,
+                'id' => 109,
+                'material_id' => 11,
+                'quantity' => 200,
+                'restocked_id' => 12,
+                'total_price' => 0,
+                'unit_price' => 0,
+                'updated_at' => NULL,
+            ),
+            109 => 
+            array (
+                'created_at' => NULL,
+                'id' => 110,
+                'material_id' => 14,
+                'quantity' => 1,
+                'restocked_id' => 1,
+                'total_price' => 2800000,
+                'unit_price' => 2800000,
+                'updated_at' => NULL,
+            ),
+        ));
+        
+        
+    }
+}
