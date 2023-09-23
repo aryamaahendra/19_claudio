@@ -4,9 +4,9 @@
         <nav class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
             aria-label="Global">
             <div class="flex items-center justify-between">
-                <a class="flex-none text-xl font-semibold dark:text-white" href="#"
-                    aria-label="Brand">
-                    Brand
+                <a class="flex-none text-xl font-semibold dark:text-white"
+                    href="{{ route('welcome') }}" aria-label="Brand">
+                    SupplyPulse
                 </a>
 
                 @include('components.layouts.dashboard.partials.navbar-hamburger')
@@ -18,11 +18,15 @@
                     <x-preline.navbar.menu-item
                         href="{{ route('welcome') }}">Landing</x-preline.navbar.menu-item>
 
-                    <a class="flex items-center gap-x-2 text-sm font-medium text-gray-500 hover:text-blue-600 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
-                        href="#">
-                        <x-icons.user-circle class="w-5 h-5" />
-                        Log out
-                    </a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+
+                        <button type="submit"
+                            class="flex items-center gap-x-2 text-sm font-medium text-gray-500 hover:text-blue-600 sm:border-l sm:border-gray-300 sm:my-6 sm:pl-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500">
+                            <x-icons.user-circle class="w-5 h-5" />
+                            Log out
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
