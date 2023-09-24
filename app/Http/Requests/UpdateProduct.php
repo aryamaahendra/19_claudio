@@ -18,7 +18,7 @@ class UpdateProduct extends CreateProduct
         foreach ($product->materials as $material) {
             if (in_array($material->id, $input['materials'])) {
                 $product->materials()->updateExistingPivot($material->id, [
-                    'material_used' => $input['meterial_used'][$material->id],
+                    'material_used' => $input['quantity'][$material->id],
                 ]);
 
                 array_push($exist, $material->id);
@@ -32,7 +32,7 @@ class UpdateProduct extends CreateProduct
 
             $material = ProductMaterial::findOrFail($id);
             $product->materials()->attach($material->id, [
-                'material_used' => $input['meterial_used'][$id]
+                'material_used' => $input['quantity'][$id]
             ]);
         }
 

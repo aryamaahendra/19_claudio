@@ -39,12 +39,12 @@ new class extends BaseTable {
         <div class="flex gap-2">
             @include('components.preline.table.base-filters')
         </div>
-
-        <form action="{{ route('dshb.minmax.process') }}" method="POST">
-            @csrf
-
-            <x-preline.button.primary type="submit">Process</x-preline.button.primary>
-        </form>
+        @if (Role::admin())
+            <form action="{{ route('dshb.minmax.process') }}" method="POST">
+                @csrf
+                <x-preline.button.primary type="submit">Process</x-preline.button.primary>
+            </form>
+        @endif
     </div>
 
     <div class="px-6 mb-6">

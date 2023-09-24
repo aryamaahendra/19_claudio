@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Role;
 use App\Http\Requests\CreateUser;
 use App\Http\Requests\UpdateUser;
 use App\Models\User;
@@ -12,6 +13,11 @@ use Illuminate\View\View;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        if (!Role::admin()) abort(401);
+    }
+
     /**
      * Display a listing of the resource.
      */

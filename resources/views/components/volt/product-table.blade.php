@@ -35,10 +35,12 @@ new class extends BaseTable {
             @include('components.preline.table.base-filters')
         </div>
 
-        <div class="">
-            <x-preline.link.primary
-                href="{{ route('dshb.produk.create') }}">Tambah</x-preline.link.primary>
-        </div>
+        @if (Role::admin())
+            <div class="">
+                <x-preline.link.primary
+                    href="{{ route('dshb.produk.create') }}">Tambah</x-preline.link.primary>
+            </div>
+        @endif
     </div>
 
     <x-preline.table>

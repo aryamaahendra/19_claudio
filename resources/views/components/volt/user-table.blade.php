@@ -17,6 +17,7 @@ new class extends BaseTable {
             Column::make('name', 'Nama'), 
             Column::make('username', 'Username'), 
             Column::make('email', 'Email'), 
+            Column::make('is_admin', 'Role'), 
             Column::make('-1', 'Aksi')
         ];
     }

@@ -23,16 +23,18 @@
     Min Max
 </x-preline.navbar.menu-item-2>
 
-<x-preline.navbar.menu-dropdown-2 label="Master" :active="false">
-    <x-preline.dropdown.item href="{{ route('dshb.bahan-baku.index') }}">
-        Bahan Baku
-    </x-preline.dropdown.item>
+@if (Role::admin())
+    <x-preline.navbar.menu-dropdown-2 label="Master" :active="false">
+        <x-preline.dropdown.item href="{{ route('dshb.bahan-baku.index') }}">
+            Bahan Baku
+        </x-preline.dropdown.item>
 
-    <x-preline.dropdown.item href="{{ route('dshb.supplier.index') }}">
-        Supplier
-    </x-preline.dropdown.item>
+        <x-preline.dropdown.item href="{{ route('dshb.supplier.index') }}">
+            Supplier
+        </x-preline.dropdown.item>
 
-    <x-preline.dropdown.item href="{{ route('dshb.user.index') }}">
-        Pengguna
-    </x-preline.dropdown.item>
-</x-preline.navbar.menu-dropdown-2>
+        <x-preline.dropdown.item href="{{ route('dshb.user.index') }}">
+            Pengguna
+        </x-preline.dropdown.item>
+    </x-preline.navbar.menu-dropdown-2>
+@endif

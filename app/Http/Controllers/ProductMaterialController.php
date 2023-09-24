@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Role;
 use App\Http\Requests\CreateProductMaterial as CreateRequest;
 use App\Http\Requests\UpdateProductMaterial as UpdateRequest;
 use App\Models\ProductMaterial;
@@ -12,6 +13,11 @@ use Illuminate\View\View;
 
 class ProductMaterialController extends Controller
 {
+    public function __construct()
+    {
+        if (!Role::admin()) abort(401);
+    }
+
     /**
      * Display a listing of the resource.
      */

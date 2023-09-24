@@ -33,8 +33,8 @@ class CreateProduct extends BaseRequest
             'unit_measure' => ['required', 'string', Rule::in(UnitMeasureEnum::all())],
             'materials' => ['array'],
             'materials.*' => ['numeric'],
-            'meterial_used' => ['array'],
-            'meterial_used.*' => ['numeric'],
+            'quantity' => ['array'],
+            'quantity.*' => ['numeric'],
         ];
     }
 
@@ -56,7 +56,7 @@ class CreateProduct extends BaseRequest
             $material = ProductMaterial::findOrFail($id);
 
             $product->materials()->attach($material->id, [
-                'material_used' => $input['meterial_used'][$id]
+                'material_used' => $input['quantity'][$id]
             ]);
         }
 

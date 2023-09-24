@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Base\BaseController;
+use App\Helpers\Role;
 use App\Http\Requests\CreateSupplier;
 use App\Http\Requests\UpdateSupplier;
 use App\Models\Supplier;
@@ -12,6 +13,11 @@ use Illuminate\View\View;
 
 class SuppliersController extends BaseController
 {
+    public function __construct()
+    {
+        if (!Role::admin()) abort(401);
+    }
+
     /**
      * Display a listing of the resource.
      */

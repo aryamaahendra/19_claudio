@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Role;
 use App\Http\Requests\CreateProduct;
 use App\Http\Requests\UpdateProduct;
 use App\Models\Product;
@@ -24,6 +25,8 @@ class ProductController extends Controller
      */
     public function create(): View
     {
+        if (!Role::admin()) abort(401);
+
         return view('product.create');
     }
 
@@ -32,6 +35,8 @@ class ProductController extends Controller
      */
     public function store(CreateProduct $request)
     {
+        if (!Role::admin()) abort(401);
+
         return $this->fulfillable(
             $request,
             'dshb.produk.index',
@@ -52,6 +57,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product): View
     {
+        if (!Role::admin()) abort(401);
+
         return view('product.update', compact('product'));
     }
 
@@ -60,6 +67,8 @@ class ProductController extends Controller
      */
     public function update(UpdateProduct $request)
     {
+        if (!Role::admin()) abort(401);
+
         return $this->fulfillable(
             $request,
             'dshb.produk.index',
@@ -72,6 +81,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        if (!Role::admin()) abort(401);
+
         try {
             DB::transaction(fn () => $product->delete());
 
