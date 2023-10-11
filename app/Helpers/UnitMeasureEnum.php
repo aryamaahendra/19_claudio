@@ -10,6 +10,9 @@ enum UnitMeasureEnum: string
     case M  = 'm';
     case SET  = 'set';
     case PCS  = 'pcs';
+    case ROL  = 'rol';
+    case YARD  = 'yard';
+    case LITER  = 'liter';
 
     public static function all(): array
     {
