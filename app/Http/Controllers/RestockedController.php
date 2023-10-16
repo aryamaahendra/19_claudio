@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateRestocked;
+use App\Http\Requests\DeleteRestocked;
 use App\Http\Requests\UpdateRestocked;
 use App\Models\Restocked;
 use Illuminate\Http\Request;
@@ -70,13 +71,13 @@ class RestockedController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restocked $restocked)
+    public function destroy(DeleteRestocked $request)
     {
         try {
-            DB::transaction(fn () => $restocked->delete());
+            $request->fulfill();
 
             $message = $this->flashMessage(false, 'Data berhasil dihapus');
-            return redirect()->route('dshb.restock.destroy')->with($message);
+            return redirect()->route('dshb.restock.index')->with($message);
         } catch (\Throwable $th) {
             throw $th;
         }

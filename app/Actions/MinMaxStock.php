@@ -19,11 +19,6 @@ class MinMaxStock
             $count = DB::table('used_material_pivot')
                 ->where('material_id', $row['id'])->count();
 
-            if ($count <= 0) {
-                unset($rows[$key]);
-                continue;
-            };
-
             $maxValue = DB::table('used_material_pivot')
                 ->where('material_id', $row['id'])
                 ->max('quantity');
@@ -33,11 +28,10 @@ class MinMaxStock
                 ->sum('quantity');
 
             // dd($maxValue);
-            $maxValue = ceil((int) $maxValue / 30);
-            $leadTime = 10;
+            $maxValue = (int) $maxValue;
+            $leadTime = 7 / 30;
 
-            $rataRataKebutuhan = (int) $sum / $count;
-            $rataRataKebutuhan = $rataRataKebutuhan / 30;
+            $rataRataKebutuhan = (int) $sum / (int) $count;
 
             // dd(($maxValue - $rataRataKebutuhan), $maxValue, $rataRataKebutuhan);
             $safetyStock = ceil(($maxValue - $rataRataKebutuhan) * $leadTime);
@@ -45,22 +39,12 @@ class MinMaxStock
             $minimumStock = ceil(($rataRataKebutuhan * $leadTime) + $safetyStock);
             $maximumStock = ceil(2 * (($rataRataKebutuhan * $leadTime) + $safetyStock));
 
-            // $new['material_id'] = (int) $row['id'];
-            // $new['total'] = (int) $sum;
-            // $new['rataRataKebutuhan'] = $rataRataKebutuhan;
-            // $new['safetyStock'] = $safetyStock;
-            // $new['minimumStock'] = $minimumStock;
-            // $new['maximumStock'] = $maximumStock;
-            // $new['q'] = $maximumStock - $minimumStock;
-
             $row->rataRataKebutuhan = $rataRataKebutuhan;
             $row->safetyStock = $safetyStock;
             $row->minimumStock = $minimumStock;
             $row->maximumStock = $maximumStock;
             $row->Q = $maximumStock - $minimumStock;
             $row->save();
-
-            // $rows[$key] = $new;
         }
     }
 }

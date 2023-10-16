@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateUsedMaterial;
+use App\Http\Requests\DeleteUsedMaterial;
 use App\Http\Requests\UpdateUsedMaterial;
 use App\Models\UsedMaterial;
 use Illuminate\View\View;
@@ -68,8 +69,15 @@ class UsedMaterialController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UsedMaterial $usedMaterial)
+    public function destroy(DeleteUsedMaterial $request)
     {
-        //
+        try {
+            $request->fulfill();
+
+            $message = $this->flashMessage(false, 'Data berhasil dihapus');
+            return redirect()->route('dshb.material-terpakai.index')->with($message);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }
