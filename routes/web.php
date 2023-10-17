@@ -62,7 +62,7 @@ Route::get('/re-calculate', function () {
         $totalUsed = DB::table('used_material_pivot')
             ->where('material_id', $material->id)->sum('quantity');
 
-        $material->in_stock = $totalStock - $totalUsed;
+        $material->in_stock = (int) $totalStock - (int) $totalUsed;
         $material->save();
     }
     echo 'success';
