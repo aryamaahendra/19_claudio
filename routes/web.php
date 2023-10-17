@@ -87,7 +87,7 @@ Route::post('/mape', function () {
             $actual = (int) $material->pivot->quantity;
 
             $ape = number_format((($actual - $forcast) / $actual) * 100, 2);
-            $mape[$material->id][$restocked->id] =  abs($ape);
+            $mape[$material->id][$restocked->id] =  abs((float) $ape);
         }
     }
 
