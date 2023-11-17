@@ -12,7 +12,6 @@ class UpdateSupplier extends CreateSupplier
     {
         $input = $this->validated();
         $model = $this->route('supplier');
-
         try {
             return DB::transaction(
                 fn () => Supplier::find($model->id)->update($input)

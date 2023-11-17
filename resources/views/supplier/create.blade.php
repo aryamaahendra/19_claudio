@@ -46,6 +46,15 @@
                     </div>
 
                     <div class="w-full mb-4">
+                        <x-preline.form.label>Lead Time</x-preline.form.label>
+                        <x-preline.form.input type="number" name="lead_time" placeholder="7"
+                            value="{{ old('lead_time') }}" />
+                        @error('lead_time')
+                            <x-preline.form.error-message :message="$message" />
+                        @enderror
+                    </div>
+
+                    <div class="w-full mb-4">
                         <x-preline.form.label>Alamat</x-preline.form.label>
                         <x-preline.form.textarea type="text" name="address"
                             placeholder="Alamat ...">{{ old('address') }}</x-preline.form.textarea>

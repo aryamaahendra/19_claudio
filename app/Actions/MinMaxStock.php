@@ -13,7 +13,7 @@ class MinMaxStock
 {
     public static function process()
     {
-        $rows = ProductMaterial::all('id');
+        $rows = ProductMaterial::with(['supplier'])->get(['id', 'supplier_id']);
 
         foreach ($rows as $key => $row) {
             $count = DB::table('used_material_pivot')
@@ -29,7 +29,7 @@ class MinMaxStock
 
             // dd($maxValue);
             $maxValue = (int) $maxValue;
-            $leadTime = 7 / 30;
+            $leadTime = (int) $row->supplier->lead_time / 30;
 
             $rataRataKebutuhan = (int) $sum / (int) $count;
 

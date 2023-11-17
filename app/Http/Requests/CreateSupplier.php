@@ -31,6 +31,7 @@ class CreateSupplier extends FormRequest
             'email' => ['required', 'string', 'max:64'],
             'phone' => ['required', 'string', 'max:16'],
             'address' => ['required', 'string'],
+            'lead_time' => ['required', 'numeric', 'min:1'],
         ];
     }
 

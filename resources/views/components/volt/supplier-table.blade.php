@@ -18,7 +18,8 @@ new class extends BaseTable {
             Column::make('name', 'Nama'), 
             Column::make('email', 'Email'), 
             Column::make('phone', 'Nomor HP'), 
-            Column::make('address', 'Alamat'), 
+            Column::make('lead_time', 'Lead'), 
+            // Column::make('address', 'Alamat'), 
             Column::make('-1', 'Aksi')
         ];
     }
