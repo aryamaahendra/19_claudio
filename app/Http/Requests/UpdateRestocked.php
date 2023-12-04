@@ -52,6 +52,8 @@ class UpdateRestocked extends CreateRestocked
             if (in_array($id, $exist)) continue;
 
             $material = ProductMaterial::findOrFail($id);
+            $currStock = (int) $material->in_stock;
+
             $restocked->materials()->attach($material->id, [
                 'quantity' => $input['quantity'][$id],
                 'unit_price' => $input['unit_price'][$id],
