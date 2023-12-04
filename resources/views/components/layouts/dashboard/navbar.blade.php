@@ -6,7 +6,7 @@
             <div class="flex items-center justify-between">
                 <a class="flex-none text-xl font-semibold dark:text-white"
                     href="{{ route('welcome') }}" aria-label="Brand">
-                    SupplyPulse
+                    SPinventory
                 </a>
 
                 @include('components.layouts.dashboard.partials.navbar-hamburger')

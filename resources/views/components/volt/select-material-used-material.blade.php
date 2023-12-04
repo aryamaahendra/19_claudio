@@ -76,7 +76,7 @@ $selected = computed(
     <x-preline.table>
         <x-preline.table.head>
             <tr class="divide-x">
-                <x-preline.table.th class="">Nama Bahan</x-preline.table.th>
+                <x-preline.table.th class="">Nama Bahan Baku</x-preline.table.th>
                 <x-preline.table.th class="w-1">Satuan</x-preline.table.th>
                 <x-preline.table.th class="w-1">Qty</x-preline.table.th>
                 <x-preline.table.th class="w-1"></x-preline.table.th>

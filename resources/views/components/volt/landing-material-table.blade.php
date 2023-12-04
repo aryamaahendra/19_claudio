@@ -15,8 +15,8 @@ new class extends BaseTable {
     {
         return [
             Column::make('code', 'Kode'), 
-            Column::make('name', 'Nama'), 
-            Column::make('in_stock', 'Stock'), 
+            Column::make('name', 'Nama Bahan Baku'), 
+            Column::make('in_stock', 'Jumlah Stock'), 
             Column::make('unit_measure', 'Satuan'),
             Column::make('supplier.name', 'Supplier')
         ];
@@ -37,28 +37,7 @@ new class extends BaseTable {
         </div>
     </div>
 
-    <div class="px-6 mb-6">
-        <div class="flex items-center">
-            <span class="w-2 h-2 inline-block bg-red-500 rounded-full mr-2"></span>
-            <span class="text-gray-600 dark:text-gray-400">
-                Persediaan berada di critical level.
-            </span>
-        </div>
-
-        <div class="flex items-center">
-            <span class="w-2 h-2 inline-block bg-yellow-500 rounded-full mr-2"></span>
-            <span class="text-gray-600 dark:text-gray-400">
-                Persediaan berada di Moderate level.
-            </span>
-        </div>
-
-        <div class="flex items-center">
-            <span class="w-2 h-2 inline-block bg-green-500 rounded-full mr-2"></span>
-            <span class="text-gray-600 dark:text-gray-400">
-                Persediaan berada di Safe level.
-            </span>
-        </div>
-    </div>
+    <x-preline.stock-levels />
 
     <x-preline.table>
         @include('components.preline.table.base-columns')

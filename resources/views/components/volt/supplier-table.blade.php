@@ -14,10 +14,10 @@ new class extends BaseTable {
     public function columns(): array
     {
         return [
-            Column::make('code', 'Kode'), 
-            Column::make('name', 'Nama'), 
-            Column::make('email', 'Email'), 
-            Column::make('phone', 'Nomor HP'), 
+            Column::make('code', 'Kode Supplier'), 
+            Column::make('name', 'Nama Supplier'), 
+            Column::make('email', 'Email Supplier'), 
+            Column::make('phone', 'Nomor HP Supplier'), 
             Column::make('lead_time', 'Lead'), 
             // Column::make('address', 'Alamat'), 
             Column::make('-1', 'Aksi')

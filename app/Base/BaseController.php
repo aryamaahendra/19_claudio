@@ -24,9 +24,13 @@ class BaseController extends Controller
 
     protected function fulfillable(Request $reqquest, string $routeName, string $message): RedirectResponse
     {
-        $reqquest->fulfill();
+        try {
+            $reqquest->fulfill();
+            $flashMessage = $this->flashMessage(false, $message);
+        } catch (\Exception $e) {
+            $flashMessage = $this->flashMessage(true, $e->getMessage());
+        }
 
-        $flashMessage = $this->flashMessage(false, $message);
         return redirect()->route($routeName)->with($flashMessage);
     }
 }

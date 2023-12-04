@@ -14,7 +14,7 @@ new class extends BaseTable {
     public function columns(): array
     {
         return [
-            Column::make('name', 'Nama'), 
+            Column::make('name', 'Nama Pengguna'), 
             Column::make('username', 'Username'), 
             Column::make('email', 'Email'), 
             Column::make('is_admin', 'Role'), 

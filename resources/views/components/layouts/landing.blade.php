@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>SPinventory</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,7 +28,7 @@
         <nav class="max-w-5xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
             aria-label="Global">
             <a class="flex-none text-xl font-semibold dark:text-white"
-                href="{{ route('welcome') }}">SupplyPulse</a>
+                href="{{ route('welcome') }}">SPinventory</a>
             <div class="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:pl-5">
                 @if (Auth::check())
                     <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"

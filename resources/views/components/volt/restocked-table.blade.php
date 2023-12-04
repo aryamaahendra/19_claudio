@@ -17,8 +17,8 @@ new class extends BaseTable {
     public function columns(): array
     {
         return [
-            Column::make('date', 'Tanggal'), 
-            Column::make('code', 'Code'),  
+            Column::make('date', 'Tanggal Restock'), 
+            Column::make('code', 'Code Restock'),  
             Column::make('-1', 'Aksi')
         ];
     }
