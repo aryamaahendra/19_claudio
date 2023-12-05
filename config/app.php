@@ -185,6 +185,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         'UnitMeasure' => App\Helpers\UnitMeasureEnum::class,
         'Role' => App\Helpers\Role::class,
+        'Utils' => App\Helpers\Utils::class,
     ])->toArray(),
 
 ];

@@ -7,25 +7,53 @@ use App\Models\ProductMaterial;
 
 state([
     'count' => null, 
-    'selected_ids' => old('materials') ?? [],
+    'selected_ids' => collect([]),
     'quantity' => [],
     'usedMaterial' => null,
 ]); 
 
 mount(function($usedMaterial = null) {
-    if(!$usedMaterial) return;
-    $this->usedMaterial = $usedMaterial;
+    if($usedMaterial) {
+        $this->usedMaterial = $usedMaterial;
 
-    $usedMaterial->load('materials');
-    foreach ($usedMaterial->materials as $item) {
-        array_push($this->selected_ids, $item->id);
-        $this->quantity[$item->id] = $item->pivot->quantity;
+        $usedMaterial->load('materials');
+        foreach ($usedMaterial->materials as $item) {
+            $this->selected_ids->push(ProductMaterial::find($item->id));
+            $this->quantity[$item->id] = $item->pivot->quantity;
+        }
+    };
+
+    if (old('materials') && count(old('materials')) > 0) {
+        foreach (old('materials') as $id) {
+            $is = true;
+            if ($usedMaterial) {
+                $key = $usedMaterial->materials->search(
+                    fn($item, $key) => $item->id == $id
+                );
+
+                if ($key !== false) {
+                    $is = false;
+                }
+            }
+
+            if($is) $this->selected_ids->push(ProductMaterial::find($id));
+        }
     }
 });
 
-$increment = fn () => array_push($this->selected_ids, $this->count['value']);
+$increment = function() {
+    $key = $this->selected_ids->search(fn($item,$key) => $item->id == $this->count['value']);
+
+    if ($key !== false) {
+        return;
+    }
+
+    $this->selected_ids->push(ProductMaterial::find($this->count['value']));   
+};
+
 $remove = function($id) {
-    $key = array_search($id, $this->selected_ids);
+    $key = $this->selected_ids->search(fn($item,$key) => $item->id == $id);
+
     if ($key !== false) {
         unset($this->selected_ids[$key]);
     }
@@ -33,11 +61,7 @@ $remove = function($id) {
 
 $data = fn() => ProductMaterial::all(['id', 'name']);
 
-$selected = computed(
-    fn() => ProductMaterial::select(
-        ['id', 'unit_measure', 'name']
-    )->whereIn('id', $this->selected_ids)->get()
-);
+$selected = computed(fn() => $this->selected_ids);
 // {{-- blade-formatter-enable --}}
 ?>
 
@@ -85,7 +109,8 @@ $selected = computed(
 
         <x-preline.table.body>
             @forelse ($this->selected as $data)
-                <tr x-data="restocked" class="divide-x">
+                <tr x-data="restocked" wire:ignore wire:key="select-material-used-{{ $data->id }}"
+                    class="divide-x">
                     <input type="hidden" name="materials[]" value="{{ $data->id }}">
 
                     <x-preline.table.td class="">
